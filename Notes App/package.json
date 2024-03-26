@@ -1,0 +1,14 @@
+{
+    "name": "assignment-6-chaitanyak48",
+    "version": "1.0.0",
+    "description": "Notes made easy by using HTML, SCSS and JavaScript to build the app.",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass styles/styles.scss dist/notes.css"
+    },
+    "author": "Mani Bharath",
+    "license": "ISC",
+    "dependencies": {
+        "sass": "^1.71.0"
+    }
+}

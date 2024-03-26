@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Meeting with Team",
+        "content": "Discuss project timeline and milestones. Assign tasks to team members. Review progress on current tasks.",
+        "creationDate": "2024-02-21T10:00:00",
+        "actionItems": [
+            {"text": "Assign task to John", "completed": false},
+            {"text": "Review design mockups", "completed": true},
+            {"text": "Schedule team training session", "completed": false}
+        ]
+    },
+    {
+        "title": "Client Call",
+        "content": "Discuss client requirements and feedback. Plan next steps for project implementation.",
+        "creationDate": "2024-02-22T15:30:00",
+        "actionItems": [
+            {"text": "Send updated proposal", "completed": false},
+            {"text": "Follow up on pending issues", "completed": false}
+        ]
+    }
+]

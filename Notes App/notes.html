@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="dist/notes.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Crisp Notes</h1>
+        <form id="noteForm">
+            <input type="text" id="noteTitleInput" placeholder="Enter note title...">
+            <textarea id="noteContent" placeholder="Enter your note..."></textarea>
+            
+            <button type="button" id="addActionItem">Add Action Item</button>
+            <ul id="actionItemList"></ul>
+            <button type="button" id="createNoteButton">Create Note</button> <!-- Change to type="button" -->
+            <button> Delete Note </button>
+        </form>
+        <div id="notesContainer"></div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html> 

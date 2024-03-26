@@ -1,0 +1,219 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgba(84, 249, 34, 0.29);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#app h1 {
+  text-align: center;
+}
+#app form {
+  margin-bottom: 20px;
+  /* Updated style for note title input */
+}
+#app form input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+}
+#app form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+#app form button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: rgba(54, 174, 229, 0.5490196078);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; /* Center the button */
+}
+#app form button.save-button {
+  background-color: aqua;
+}
+#app form button.cancel-button {
+  background-color: darkgrey;
+}
+#app form button:hover {
+  background-color: #268e4e;
+}
+#app form #createNoteButton {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: rgba(238, 192, 112, 0.7450980392);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto; /* Center the button */
+  transition: background-color 0.3s ease;
+}
+#app form #createNoteButton:hover {
+  background-color: #dba829;
+}
+#app form #actionItemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#app form #actionItemList li {
+  margin-bottom: 10px;
+}
+#app form #actionItemList li input {
+  margin-right: 10px;
+}
+#app form #actionItemList li span {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+#app form #actionItemList li span:empty:before {
+  content: attr(placeholder);
+  color: #aaa;
+}
+#app #notesContainer .note {
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+#app #notesContainer .note.expanded .note-content p {
+  max-height: none;
+}
+#app #notesContainer .note:hover {
+  background-color: #ccc;
+}
+#app #notesContainer .note .note-content h3, #app #notesContainer .note .note-content p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app #notesContainer .note .note-content p {
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#app #notesContainer .note .note-content small {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+}
+#app #notesContainer .note .note-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#app #notesContainer .note .note-content ul li {
+  margin-bottom: 5px;
+}
+#app #notesContainer .note .note-content ul li input {
+  margin-right: 5px;
+}
+#app #notesContainer .note .note-content ul li span {
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+#app #notesContainer .note .note-content ul li span:empty:before {
+  content: attr(placeholder);
+  color: #aaa;
+}
+#app #notesContainer .note .delete-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+#app #notesContainer .note-card {
+  background-color: #e0e0e0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+#app #notesContainer .note-card .note-content h3, #app #notesContainer .note-card .note-content p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  outline: none;
+}
+#app #notesContainer .note-card .note-content h3:empty:before, #app #notesContainer .note-card .note-content p:empty:before {
+  content: attr(placeholder);
+  color: rgba(170, 170, 170, 0.4470588235);
+}
+#app #notesContainer .note-card .note-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#app #notesContainer .note-card .note-content ul li {
+  margin-bottom: 10px;
+}
+#app #notesContainer .note-card .note-content ul li input {
+  margin-right: 10px;
+}
+#app #notesContainer .note-card .note-content ul li span {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+#app #notesContainer .note-card .note-content ul li span:empty:before {
+  content: attr(placeholder);
+  color: #aaa;
+}
+#app #notesContainer .editable .note-content h3, #app #notesContainer .editable .note-content p {
+  background-color: #f0f0f0;
+}
+#app #notesContainer .editable .note-content ul li {
+  background-color: #f0f0f0;
+}
+#app #notesContainer .editable .note-content ul li input {
+  margin-right: 5px;
+}
+#app #notesContainer .editable .note-content ul li span {
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+#app #notesContainer .editable .note-content ul li span:empty:before {
+  content: attr(placeholder);
+  color: #aaa;
+}
+
+/*# sourceMappingURL=notes.css.map */

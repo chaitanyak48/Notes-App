@@ -1,0 +1,273 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgb(84 249 34 / 29%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        margin-bottom: 20px;
+
+        /* Updated style for note title input */
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 4px;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        button {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            background-color: #36aee58c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 auto; /* Center the button */
+        }
+        
+        button.save-button {
+            background-color: aqua;
+        }
+
+        button.cancel-button {
+            background-color: darkgrey;
+        }
+
+        button:hover {
+            background-color: #268e4e;
+        }
+
+        #createNoteButton {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            background-color: #eec070be;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 auto; /* Center the button */
+            transition: background-color 0.3s ease;
+        }
+
+        #createNoteButton:hover {
+            background-color: #dba829;
+        }
+
+        #actionItemList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 10px;
+
+                input {
+                    margin-right: 10px;
+                }
+
+                span {
+                    padding: 5px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    outline: none;
+
+                    &:empty:before {
+                        content: attr(placeholder);
+                        color: #aaa;
+                    }
+                }
+            }
+        }
+    }
+
+    #notesContainer {
+        .note {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+
+            &.expanded {
+                .note-content {
+                    p {
+                        max-height: none;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: #ccc;
+            }
+
+            .note-content {
+                h3, p {
+                    margin: 0;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                p {
+                    max-height: 40px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                small {
+                    display: block;
+                    margin-top: 10px;
+                    color: #666;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        input {
+                            margin-right: 5px;
+                        }
+
+                        span {
+                            padding: 3px;
+                            border: 1px solid #ddd;
+                            border-radius: 3px;
+                            outline: none;
+
+                            &:empty:before {
+                                content: attr(placeholder);
+                                color: #aaa;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .delete-button {
+                background-color: #ff6347;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                float: right;
+            }
+        }
+
+        .note-card {
+            background-color: #e0e0e0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+
+            .note-content {
+                h3, p {
+                    margin: 0;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    margin-bottom: 10px;
+                    outline: none;
+
+                    &:empty:before {
+                        content: attr(placeholder);
+                        color: #aaaaaa72;
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        margin-bottom: 10px;
+
+                        input {
+                            margin-right: 10px;
+                        }
+
+                        span {
+                            padding: 5px;
+                            border: 1px solid #ddd;
+                            border-radius: 4px;
+                            outline: none;
+
+                            &:empty:before {
+                                content: attr(placeholder);
+                                color: #aaa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .editable {
+            .note-content {
+                h3, p {
+                    background-color: #f0f0f0;
+                }
+
+                ul {
+                    li {
+                        background-color: #f0f0f0;
+
+                        input {
+                            margin-right: 5px;
+                        }
+
+                        span {
+                            padding: 3px;
+                            border: 1px solid #ddd;
+                            border-radius: 3px;
+                            outline: none;
+
+                            &:empty:before {
+                                content: attr(placeholder);
+                                color: #aaa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
